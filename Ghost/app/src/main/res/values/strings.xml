@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ghost</string>
+    <string name="title">GHOST</string>
+    <string name="subtitle">By Cornelis Boon</string>
+    <string name="play">Play a Game</string>
+    <string name="highscores">High Scores</string>
+    <string name="Options">Options</string>
+    <string name="GoBack">Go Back</string>
+</resources>
