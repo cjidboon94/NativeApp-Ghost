@@ -7,12 +7,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+
+/**
+ * Cornelis Boon - 10561145
+ * Controller Class for the Main activity (the home activity)
+ *
+ * Provides functionality to the activity's Buttons.
+ * */
 public class MainActivity extends Activity {
+    GhostApp app;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        app = (GhostApp)this.getApplication();
     }
 
     @Override
@@ -37,9 +47,19 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClickPlay(View view){
-        Intent intent = new Intent(this, GameActivity.class);
+    /**
+     * Goes to the saved game or goes to the options screen to set up a new game */
+    public void onClickPlay(View view) {
+        Intent intent;
+        if (app.getGame() != null && app.getGame().isStarted()) {
+            intent = new Intent(this, GameActivity.class);
+
+        } else {
+            intent = new Intent(this, OptionsActivity.class);
+            intent.putExtra("fromMain", true);
+        }
         startActivity(intent);
+
     }
 
     public void onClickHighscores(View view){
@@ -47,8 +67,5 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    public void onClickOptions(View view){
-        Intent intent = new Intent(this, OptionsActivity.class);
-        startActivity(intent);
-    }
+
 }

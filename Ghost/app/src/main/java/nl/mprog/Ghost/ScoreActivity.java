@@ -1,19 +1,40 @@
 package nl.mprog.Ghost;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
+import java.util.ArrayList;
+
+import nl.mprog.Ghost.Database.DBHelper;
+
+
+/**
+ * Cornelis Boon - 10561145
+ * Controller class for the score activity.
+ * Displays the highscores of players sorted on their scores
+ * */
 public class ScoreActivity extends Activity {
-    DBHelper db;
+
+    /**
+     * Retrieves the scores and names of players and shows them in the listview */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        DBHelper db = new DBHelper(this);
+        ArrayList<String> list = db.readAll();
+        list.add(0, "Name\t|\tScore");
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                                            R.layout.score_entry, R.id.scoreLine, list);
+        ListView listview = (ListView)findViewById(R.id.scores);
+        listview.setAdapter(adapter);
     }
 
     @Override

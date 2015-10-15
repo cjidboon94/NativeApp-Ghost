@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="nl.mprog.Ghost.OptionsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/optLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonOptLayout">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroupOpt"
+            android:orientation="horizontal"
+            android:layout_above="@+id/player1OptLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="44dp">
+
+            <TextView
+                android:layout_width="146dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/language"
+                android:gravity="center_vertical"
+                android:id="@+id/optionsLanguageTitle" />
+
+            <RadioButton
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nl"
+                android:id="@+id/radioDutch" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/en"
+                android:id="@+id/radioEnglish" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1OptLayout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Change name player 1"
+                android:id="@+id/titlePlayer1Opt"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_centerVertical="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editPlayer1Opt"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player2OptLayout"
+            android:layout_below="@+id/player1OptLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Change name player 2"
+                android:id="@+id/titlePlayer2Opt"
+                android:layout_above="@+id/player2OptLayout"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editPlayer2Opt"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonOptLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:onClick="onClickConfirm"
+            android:id="@+id/button6" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="onClickCancel"
+            android:id="@+id/goBackOpt" />
+
+    </LinearLayout>
+
+</RelativeLayout>

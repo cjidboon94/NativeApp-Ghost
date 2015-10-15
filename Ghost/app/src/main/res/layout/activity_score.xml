@@ -20,7 +20,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/GoBack"
+        android:text="@string/goback"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="42dp"

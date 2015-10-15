@@ -5,5 +5,15 @@
     <string name="play">Play a Game</string>
     <string name="highscores">High Scores</string>
     <string name="Options">Options</string>
-    <string name="GoBack">Go Back</string>
+    <string name="goback">Go Back</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="home">Home</string>
+    <string name="reset">Reset</string>
+    <string name="language">Language:</string>
+    <string name="hint">1 Letter Please</string>
+    <string name="en">English</string>
+    <string name="nl">Dutch</string>
+    <string name="action_settings">Nope</string>
+
 </resources>
