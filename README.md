@@ -3,11 +3,6 @@ An app that plays an instance of the game Ghost. Built for the Native App Studio
 
 
 ##Features
-- Can play against other people or against a computer.
+- Two player game
 - In several languages
-- Colourful design
-- Supports only landscape mode
-- Contains easter-eggs (find them all for a special surprise)
-
-##Sketches
-(To be made)
+- Supports only portrait mode 
